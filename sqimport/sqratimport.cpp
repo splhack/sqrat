@@ -237,7 +237,6 @@ SQRESULT sqrat_import(HSQUIRRELVM v) {
 	HSQOBJECT table;
 	SQRESULT res = SQ_OK;
 	
-	SQInteger top = sq_gettop(v);
 	sq_getstring(v, -2, &moduleName);
 	sq_getstackobj(v, -1, &table);
 	sq_addref(v, &table);

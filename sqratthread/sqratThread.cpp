@@ -101,7 +101,7 @@ SQInteger sqrat_schedule_argcall(HSQUIRRELVM v) {
 
 // This is a horrid way to get this functionality in there, but I can't find any alternatives right now.
 SQRESULT sqrat_pushsleep(HSQUIRRELVM v) {
-	SQChar* sleep_script = _SC(" \
+	SQChar* sleep_script = (SQChar *)_SC(" \
 		__sqratsleep__ <- function(timeout) { \
 			local begin = clock(); \
 			local now; \

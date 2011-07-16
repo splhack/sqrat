@@ -34,6 +34,10 @@
 extern "C" {
 #endif
 
+#if !defined(WIN32)
+# define __declspec(x)
+#endif  /* !WIN32 */
+
 __declspec(dllexport) SQRESULT sqmodule_load(HSQUIRRELVM v, HSQAPI api);
 
 #ifdef __cplusplus
